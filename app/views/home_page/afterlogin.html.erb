@@ -14,11 +14,11 @@
 <%= link_to 'New Acebookpost', new_acebookpost_path %> <br/>
 
 <tbody>
-  <% @acebookposts.each do |acebookpost| %>
+  <%@acebookpost = @acebookposts.reverse %>
+  <% @acebookpost.each do |acebookpost| %>
 
     <tr>
       <td><%= acebookpost.content %></td>
-      <small> <%=acebookpost.created_at%></small>
       <td><%= link_to 'Edit', edit_acebookpost_path(acebookpost) %></td>
       <td><%= link_to 'Destroy', acebookpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <br/> <small> Created at : <%=acebookpost.created_at%></small>
