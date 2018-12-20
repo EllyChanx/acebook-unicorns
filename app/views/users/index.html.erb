@@ -1,0 +1,23 @@
+<h1>User Profile</h1>
+
+<table>
+  <tr>
+    <th>User Name</th>
+    <th>Birthday</th>
+    <th>Occupation</th>
+    <th>Bio</th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td><%= current_user.user_name %></td>
+    <td><%= current_user.birthday %></td>
+    <td><%= current_user.occupation %></td>
+    <td><%= current_user.bio %></td>
+    
+    <td><%= link_to 'edit', edit_user_path(current_user) %></td>
+
+  </tr>
+
+
+</table>

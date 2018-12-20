@@ -3,10 +3,11 @@
 
 
   <% if user_signed_in? %>
-    <div>Signed in as... <%= current_user.email %></div>
-    <div>Signed in as... <%= current_user.id %></div>
+    <div> in with... <%= current_user.email %></div>
   <% end %>
 
-<%= link_to 'User Profile', userprofile_path, :class => 'btn btn-secondary'%>
+
+
+<%= link_to 'User Profile', controller: 'users' %>
 
 <p><%= link_to "Update account details", edit_user_registration_path %></p>

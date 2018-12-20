@@ -12,16 +12,18 @@
   <% end %>
 
   <div>
-    <p>Nick Name: <%= current_user.user_name %> </p>
+    <p>Name: <%= current_user.user_name %> </p>
     <p>Birth Day: <%= current_user.birthday %></p>
     <p>Occupation: <%= current_user.occupation %></p>
   </div>
 
 </div>
 
+
 <%= form_tag "/userprofile", method: :get do %>
-  <%= label_tag :user_name %>
-  <%= text_field_tag :user_name %>
+
+  <label> Name <%= text_field_tag :user_name %> </label>
+
   <br>
   <%= label_tag :birthday %>
   <%= text_field_tag :birthday %>
@@ -33,9 +35,14 @@
   <%= text_field_tag :avatar %>
   <br>
 
-
   <%= submit_tag "Submit" %>
 <% end %>
 
+
+
 <p> ---- </p>
+
+<p>
+  <%= link_to "Back", root_path%>
+</p>
 
