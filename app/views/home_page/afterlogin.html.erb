@@ -10,3 +10,16 @@
 <%= link_to 'User Profile', userprofile_path, :class => 'btn btn-secondary'%>
 
 <p><%= link_to "Update account details", edit_user_registration_path %></p>
+
+<%= link_to 'New Acebookpost', new_acebookpost_path %> <br/>
+
+<tbody>
+  <% @acebookposts.each do |acebookpost| %>
+    <tr>
+      <td><%= acebookpost.content %></td>
+      <td><%= link_to 'Edit', edit_acebookpost_path(acebookpost) %></td>
+      <td><%= link_to 'Destroy', acebookpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <br/>
+  <% end %>
+</tbody>

@@ -1,0 +1,2 @@
+class Acebookpost < ApplicationRecord
+end

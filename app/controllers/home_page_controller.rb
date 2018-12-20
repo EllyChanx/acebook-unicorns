@@ -5,7 +5,7 @@ class HomePageController < ApplicationController
   end
 
   def afterlogin
-    
+    @acebookposts = Acebookpost.all
   end
 
   def userprofile
@@ -22,7 +22,7 @@ class HomePageController < ApplicationController
     @user.avatar = set_avatar
 
     @user.save
-    
+
   end
 
 
