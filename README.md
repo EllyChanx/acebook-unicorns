@@ -18,8 +18,13 @@ the below**
 
 2. The card wall is here: <please update>
 
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+### Entity Relationship Diagram
+The below diagram indicates that:
+- A user has many posts
+- A post has 0 or many comments
+- A post has 0 or many likes
+
+![ER_Diagram](public/ER_Diagram.png)
 
 ## Quickstart
 
